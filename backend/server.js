@@ -8,7 +8,7 @@ const app = express();
 const port = 5000;
 
 const corsOptions = {
-  origin: 'https://billing-app-pyze-d4y0n07oc-satvikrajan.vercel.app/',
+  origin: '*',
   methods: 'GET,POST',
   allowedHeaders: 'Content-Type,Authorization',
 };
