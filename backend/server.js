@@ -7,7 +7,13 @@ const Sell = require('./models/Sell');
 const app = express();
 const port = 5000;
 
-app.use(cors());
+const corsOptions = {
+  origin: 'https://billing-app-pyze.vercel.app/',
+  methods: 'GET,POST',
+  allowedHeaders: 'Content-Type,Authorization',
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());;
 
 mongoose.connect('mongodb+srv://satvikrajan:Satvik2003@cluster0.9xmm0uz.mongodb.net/billing-app?retryWrites=true&w=majority', {
