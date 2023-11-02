@@ -6,7 +6,7 @@ export default function BuyingTable() {
   const [mode, setMode] = useState('buy');
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/products/buyingtable?search=${search}`)
+    fetch(`https://billing-app-murex.vercel.app/api/products/buyingtable?search=${search}`)
       .then((response) => response.json())
       .then((data) => {
         setProducts(data);
