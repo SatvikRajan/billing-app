@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const Buy = require('./models/Buy');
 const Sell = require('./models/Sell'); 
-
+require('dotenv').config
 const app = express();
 const port = 5000;
 
@@ -86,6 +86,6 @@ app.get('/api/products/getcgstsgst', async (req, res) => {
 });
 
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Server is running on port ${port}`);
 });
