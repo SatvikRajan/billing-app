@@ -6,7 +6,7 @@ const buySchema = new mongoose.Schema({
   mrp: { type: Number, required: true },
   quantity: { type: Number, required: true },
   ratePerUnit: { type: Number, required: true },
-  expiry: { type: Date, required: true , get: (v) => v.toISOString().split('T')[0], set: (v) => new Date(v)},
+  expiry: { type: Date, required: true},
   cgst: { type: Number, required: true },
   cgstamt: { type: Number, required: true },
   sgst: { type: Number, required: true },
