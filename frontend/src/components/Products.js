@@ -27,7 +27,7 @@ export default function Buying() {
   
   const handleNameBlur = () => {
     if (product.name) {
-      fetch(`https://billing-app-murex.vercel.app/api/products/getcgstsgst?name=${product.name}&mode=${mode}`)
+      fetch(`https://billingapp-t312.onrender.com/api/products/getcgstsgst?name=${product.name}&mode=${mode}`)
         .then((response) => response.json())
         .then((data) => {
           const { cgst, sgst } = data;
@@ -54,7 +54,7 @@ export default function Buying() {
         toast.error('Please fill in all fields');
       } else {
         const tableName = mode === 'buy' ? 'buying' : 'selling';
-        fetch(`https://billing-app-murex.vercel.app/api/products/${tableName}`, {
+        fetch(`https://billingapp-t312.onrender.com/api/products/${tableName}`, {
           method: 'POST',
         headers: {
           'Content-Type': 'application/json',

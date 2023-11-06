@@ -1,10 +1,10 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const Buy = require('./models/Buy');
-const Sell = require('./models/Sell'); 
+const express = require('express')
+const mongoose = require('mongoose')
+const cors = require('cors')
+const Buy = require('./models/Buy')
+const Sell = require('./models/Sell')
 require('dotenv').config
-const app = express();
+const app = express()
 const port = 5000;
 
 const corsOptions = {
@@ -15,7 +15,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions)); 
 app.use(express.json());;
-
+// app.use(cors())
 mongoose.connect('mongodb+srv://satvikrajan:Satvik2003@cluster0.9xmm0uz.mongodb.net/billing-app?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true

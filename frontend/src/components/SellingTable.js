@@ -5,7 +5,7 @@ export default function SellingTable() {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    fetch(`https://billing-app-murex.vercel.app/api/products/sellingtable?search=${search}`)
+    fetch(`https://billingapp-t312.onrender.com/api/products/sellingtable?search=${search}`)
       .then((response) => response.json())
       .then((data) => {
         setProducts(data);

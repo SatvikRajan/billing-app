@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 export default function BuyingTable() {
   const [products, setProducts] = useState([]);
-  const [search, setSearch] = useState('');
-  const [mode, setMode] = useState('buy');
+  const [search, setSearch] = useState('')
+  const [mode, setMode] = useState('buy')
 
   useEffect(() => {
-    fetch(`https://billing-app-murex.vercel.app/api/products/buyingtable?search=${search}`)
+    fetch(`https://billingapp-t312.onrender.com/api/products/buyingtable?search=${search}`)
       .then((response) => response.json())
       .then((data) => {
         setProducts(data);
