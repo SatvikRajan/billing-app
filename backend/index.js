@@ -7,15 +7,14 @@ require('dotenv').config
 const app = express()
 const port = 5000;
 
-const corsOptions = {
-  origin: 'https://billing-app-pyze-d4y0n07oc-satvikrajan.vercel.app',
-  methods: 'GET,POST',
-  allowedHeaders: 'Content-Type,Authorization',
-};
+// const corsOptions = {
+//   origin: 'https://billing-app-pyze-d4y0n07oc-satvikrajan.vercel.app',
+//   methods: 'GET,POST',
+//   allowedHeaders: 'Content-Type,Authorization',
+// };
 
-app.use(cors(corsOptions)); 
 app.use(express.json());;
-// app.use(cors())
+app.use(cors())
 mongoose.connect('mongodb+srv://satvikrajan:Satvik2003@cluster0.9xmm0uz.mongodb.net/billing-app?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
